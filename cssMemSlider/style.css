@@ -29,43 +29,50 @@
     height: 60vh;
     overflow: hidden;
     margin: 0 auto;
+    text-align: center;
 }
 
-.img-content > div {
+.img {
+    display: block;
     width: 45vw;
     height: 60vh;
-    margin: 0 auto;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
-.img-1 {
-    background-image: url("./assets/1.jpg");
-    background-size: contain;
+.content {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-top: 2%;
+}
 
+.text > div {
+    font-size: 1.25rem;
+    display: none;
 }
-.img-2 {
-    background-image: url("./assets/2.jpg");
-    background-size: contain;
-    background-position: center;
+
+#cb-1:checked ~  #mem-text-1 {
+    display: block;
 }
-.img-3 {
-    background-image: url("./assets/3.jpg");
-    background-size: contain;
-    background-position: center;
+
+.nav-points {
+    width: 50%;
 }
-.img-4 {
-    background-image: url("./assets/4.jpg");
-    background-size: contain;
-    background-position: center;
+
+label {
+    padding: 0.5rem;
 }
-.img-5 {
-    background-image: url("./assets/5.jpg");
-    background-size: contain;
-    background-position: center;
+
+label:hover {
+    cursor: pointer;
+    color: #c7c4ae;
 }
-.img-6 {
-    background-image: url("./assets/6.jpg");
-    background-size: contain;
-    background-position: center;
+
+input[type=radio] {
+    width: 1.25rem;
+    height: 1.25rem;
+    background-color:#e4e1c4;
+}
+
+input[type=radio]:hover {
+    
 }
