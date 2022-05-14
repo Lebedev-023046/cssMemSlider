@@ -27,8 +27,45 @@
 .img-content {
     width: 45vw;
     height: 60vh;
+    overflow: hidden;
     margin: 0 auto;
-    background: url("./assets/1.jpg") no-repeat;
+}
+
+.img-content > div {
+    width: 45vw;
+    height: 60vh;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.img-1 {
+    background-image: url("./assets/1.jpg");
+    background-size: contain;
+
+}
+.img-2 {
+    background-image: url("./assets/2.jpg");
+    background-size: contain;
+    background-position: center;
+}
+.img-3 {
+    background-image: url("./assets/3.jpg");
+    background-size: contain;
+    background-position: center;
+}
+.img-4 {
+    background-image: url("./assets/4.jpg");
+    background-size: contain;
+    background-position: center;
+}
+.img-5 {
+    background-image: url("./assets/5.jpg");
+    background-size: contain;
+    background-position: center;
+}
+.img-6 {
+    background-image: url("./assets/6.jpg");
     background-size: contain;
     background-position: center;
 }
