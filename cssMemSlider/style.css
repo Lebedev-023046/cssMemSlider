@@ -5,6 +5,55 @@
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+@keyframes appear-1 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes appear-2 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes appear-3 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes appear-4 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes appear-5 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes appear-6 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
 img {
     width: 590px;
     height: 400px;
@@ -39,7 +88,6 @@ img {
 .img { /* responsible for mem-movement */
     width: 590px;
     height: 400px;
-    transform: translateX(-1180px);
 }
 
 .content {
@@ -76,21 +124,27 @@ label:hover {
 /* text-generation */
 #r-1:checked ~ .content #mem-text-1 {
     display: block;
+    animation: appear-1 .5s;
 }
 #r-2:checked ~ .content #mem-text-2 {
     display: block;
+    animation: appear-2 .5s;
 }
 #r-3:checked ~ .content #mem-text-3 {
     display: block;
+    animation: appear-3 .5s;
 }
 #r-4:checked ~ .content #mem-text-4 {
     display: block;
+    animation: appear-4 .5s;
 }
 #r-5:checked ~ .content #mem-text-5 {
     display: block;
+    animation: appear-5 .5s;
 }
 #r-6:checked ~ .content #mem-text-6 {
     display: block;
+    animation: appear-6 .5s;
 }
 
 /* active radio */
@@ -111,6 +165,32 @@ label:hover {
 }
 #r-6:checked ~ .content .nav-points label:nth-child(6) {
     background-color: rgb(253, 212, 107);
+}
+
+/* active mem */
+#r-1:checked ~ .img-content .img {
+    transform: translateX(0px);
+    animation: appear-1 .5s;
+}
+#r-2:checked ~ .img-content .img {
+    transform: translateX(-590px);
+    animation: appear-2 .5s;
+}
+#r-3:checked ~ .img-content .img {
+    transform: translateX(-1180px);
+    animation: appear-3 .5s;
+}
+#r-4:checked ~ .img-content .img {
+    transform: translateX(-1770px);
+    animation: appear-4 .5s;
+}
+#r-5:checked ~ .img-content .img {
+    transform: translateX(-2360px);
+    animation: appear-5 .5s;
+}
+#r-6:checked ~ .img-content .img {
+    transform: translateX(-2950px);
+    animation: appear-6 .5s;
 }
 
 .radio {
