@@ -5,8 +5,13 @@
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+img {
+    width: 590px;
+    height: 400px;
+}
+
 .wrapper {
-    width: 50vw;
+    width: 600px;
     height: 80vh;
     margin: 3vh auto;
     border-radius: 2%;
@@ -15,6 +20,7 @@
 
 .container {
     padding: 2%;
+    overflow: hidden;
 }
 
 .title {
@@ -25,17 +31,15 @@
 }
 
 .img-content {
-    width: 45vw;
-    height: 60vh;
+    display: flex;
     overflow: hidden;
     margin: 0 auto;
-    text-align: center;
 }
 
-.img {
-    display: block;
-    width: 45vw;
-    height: 60vh;
+.img { /* responsible for mem-movement */
+    width: 590px;
+    height: 400px;
+    transform: translateX(-1180px);
 }
 
 .content {
@@ -47,15 +51,70 @@
 
 .text > div {
     font-size: 1.25rem;
+    color: rgb(103, 90, 57);
     display: none;
 }
 
-#cb-1:checked ~  #mem-text-1 {
+.nav-points {
+    display: flex;
+}
+
+label {
+    width: 7px;
+    height: 7px;
+    background-color: rgb(255, 229, 164);
+    border-radius: 50%;
+    border: 3px solid rgb(250, 213, 120);
+    margin: 5px;
+    transition: .2s;
+}
+
+label:hover {
+    background-color: rgb(253, 212, 107);
+}
+
+/* text-generation */
+#r-1:checked ~ .content #mem-text-1 {
+    display: block;
+}
+#r-2:checked ~ .content #mem-text-2 {
+    display: block;
+}
+#r-3:checked ~ .content #mem-text-3 {
+    display: block;
+}
+#r-4:checked ~ .content #mem-text-4 {
+    display: block;
+}
+#r-5:checked ~ .content #mem-text-5 {
+    display: block;
+}
+#r-6:checked ~ .content #mem-text-6 {
     display: block;
 }
 
-.nav-points {
-    width: 50%;
+/* active radio */
+#r-1:checked ~ .content .nav-points label:nth-child(1) {
+    background-color: rgb(253, 212, 107);
+}
+#r-2:checked ~ .content .nav-points label:nth-child(2) {
+    background-color: rgb(253, 212, 107);
+}
+#r-3:checked ~ .content .nav-points label:nth-child(3) {
+    background-color: rgb(253, 212, 107);
+}
+#r-4:checked ~ .content .nav-points label:nth-child(4) {
+    background-color: rgb(253, 212, 107);
+}
+#r-5:checked ~ .content .nav-points label:nth-child(5) {
+    background-color: rgb(253, 212, 107);
+}
+#r-6:checked ~ .content .nav-points label:nth-child(6) {
+    background-color: rgb(253, 212, 107);
+}
+
+.radio {
+    display: none;
 }
 
 label {
@@ -65,14 +124,4 @@ label {
 label:hover {
     cursor: pointer;
     color: #c7c4ae;
-}
-
-input[type=radio] {
-    width: 1.25rem;
-    height: 1.25rem;
-    background-color:#e4e1c4;
-}
-
-input[type=radio]:hover {
-    
 }
