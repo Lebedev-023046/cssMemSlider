@@ -55,12 +55,12 @@
 }
 
 .container {
-    width: 40%;
+    width: 50%;
     height: 85vh;
     margin: 3vh auto;
     border-radius: 2%;
     background-color: #c7c4ae;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .title {
@@ -79,12 +79,15 @@
 .slide {
     width: 20%;
     transition: all .2s ease;
+    border-radius: 2%;
 }
 
 .slide img {
     object-fit: contain;
     width: 100%;
     height: 100%;
+    border-radius: 2%;
+    margin-top: 3%;
 }
 
 .content {
@@ -103,10 +106,6 @@
 
 .nav-points {
     display: flex;
-}
-
-span:hover {
-    background-color: rgb(253, 212, 107);
 }
 
 /* text-generation */
@@ -132,21 +131,22 @@ span:hover {
 }
 
 /* active radio */
-#r-1:checked ~ .content .nav-points label:nth-child(1) span {
-    background-color: rgb(253, 212, 107);
+#r-1:checked ~ .container .content .nav-points label:nth-child(1) span {
+    background-color: rgb(252, 195, 51);
 }
-#r-2:checked ~ .content .nav-points label:nth-child(2) span{
-    background-color: rgb(253, 212, 107);
+#r-2:checked ~ .container .content .nav-points label:nth-child(2) span {
+    background-color: rgb(252, 195, 51);
 }
-#r-3:checked ~ .content .nav-points label:nth-child(3) span{
-    background-color: rgb(253, 212, 107);
+#r-3:checked ~ .container .content .nav-points label:nth-child(3) span {
+    background-color: rgb(252, 195, 51);
 }
-#r-4:checked ~ .content .nav-points label:nth-child(4) span{
-    background-color: rgb(253, 212, 107);
+#r-4:checked ~ .container .content .nav-points label:nth-child(4) span {
+    background-color: rgb(252, 195, 51);
 }
-#r-5:checked ~ .content .nav-points label:nth-child(5) span{
-    background-color: rgb(253, 212, 107);
+#r-5:checked ~ .container .content .nav-points label:nth-child(5) span {
+    background-color: rgb(252, 195, 51);
 }
+
 
 /* active mem */
 #r-1:checked ~ .container .slides .slide {
@@ -174,8 +174,12 @@ label {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    width: 2em;
-    height: 2em;
+    width: 3em;
+    height: 3em;
+}
+
+label:hover {
+    cursor: pointer;
 }
 
 span {
@@ -184,12 +188,17 @@ span {
     background-color: rgb(255, 229, 164);
     border-radius: 50%;
     transition: .2s;
-    /* border: 1px solid rgb(250, 213, 120); */
+    border: 1px solid rgb(250, 213, 120);
 }
 
 span:hover {
     cursor: pointer;
-    background-color: #85805d;
+    background-color: rgb(253, 212, 107);
 }
 
+
 /* mobile version */
+
+@media screen (max-width: 768px) {
+    
+}
