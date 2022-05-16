@@ -54,51 +54,49 @@
     }
 }
 
-img {
-    width: 590px;
-    height: 400px;
-}
-
-.wrapper {
-    width: 600px;
-    height: 80vh;
+.container {
+    width: 40%;
+    height: 85vh;
     margin: 3vh auto;
     border-radius: 2%;
     background-color: #c7c4ae;
-}
-
-.container {
-    padding: 2%;
     overflow: hidden;
 }
 
 .title {
     text-align: center;
     margin: 1%;
-    font-size: 2rem;
+    font-size: 2em;
     text-transform: uppercase;
 }
 
-.img-content {
+.slides {
     display: flex;
-    overflow: hidden;
-    margin: 0 auto;
+    width: 500%;
+    height: 80%;
 }
 
-.img { /* responsible for mem-movement */
-    width: 590px;
-    height: 400px;
+.slide {
+    width: 20%;
+    transition: all .2s ease;
+}
+
+.slide img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
 }
 
 .content {
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-between;
+    padding: 3%;
     margin-top: 2%;
 }
 
 .text > div {
-    font-size: 1.25rem;
+    font-size: 1.25em;
     color: rgb(103, 90, 57);
     display: none;
 }
@@ -107,90 +105,64 @@ img {
     display: flex;
 }
 
-label {
-    width: 7px;
-    height: 7px;
-    background-color: rgb(255, 229, 164);
-    border-radius: 50%;
-    border: 3px solid rgb(250, 213, 120);
-    margin: 5px;
-    transition: .2s;
-}
-
-label:hover {
+span:hover {
     background-color: rgb(253, 212, 107);
 }
 
 /* text-generation */
-#r-1:checked ~ .content #mem-text-1 {
+#r-1:checked ~ .container  .content #mem-text-1 {
     display: block;
     animation: appear-1 .5s;
 }
-#r-2:checked ~ .content #mem-text-2 {
+#r-2:checked ~ .container .content #mem-text-2 {
     display: block;
     animation: appear-2 .5s;
 }
-#r-3:checked ~ .content #mem-text-3 {
+#r-3:checked ~ .container .content #mem-text-3 {
     display: block;
     animation: appear-3 .5s;
 }
-#r-4:checked ~ .content #mem-text-4 {
+#r-4:checked ~ .container .content #mem-text-4 {
     display: block;
     animation: appear-4 .5s;
 }
-#r-5:checked ~ .content #mem-text-5 {
+#r-5:checked ~ .container .content #mem-text-5 {
     display: block;
     animation: appear-5 .5s;
 }
-#r-6:checked ~ .content #mem-text-6 {
-    display: block;
-    animation: appear-6 .5s;
-}
 
 /* active radio */
-#r-1:checked ~ .content .nav-points label:nth-child(1) {
+#r-1:checked ~ .content .nav-points label:nth-child(1) span {
     background-color: rgb(253, 212, 107);
 }
-#r-2:checked ~ .content .nav-points label:nth-child(2) {
+#r-2:checked ~ .content .nav-points label:nth-child(2) span{
     background-color: rgb(253, 212, 107);
 }
-#r-3:checked ~ .content .nav-points label:nth-child(3) {
+#r-3:checked ~ .content .nav-points label:nth-child(3) span{
     background-color: rgb(253, 212, 107);
 }
-#r-4:checked ~ .content .nav-points label:nth-child(4) {
+#r-4:checked ~ .content .nav-points label:nth-child(4) span{
     background-color: rgb(253, 212, 107);
 }
-#r-5:checked ~ .content .nav-points label:nth-child(5) {
-    background-color: rgb(253, 212, 107);
-}
-#r-6:checked ~ .content .nav-points label:nth-child(6) {
+#r-5:checked ~ .content .nav-points label:nth-child(5) span{
     background-color: rgb(253, 212, 107);
 }
 
 /* active mem */
-#r-1:checked ~ .img-content .img {
-    transform: translateX(0px);
-    animation: appear-1 .5s;
+#r-1:checked ~ .container .slides .slide {
+    transform: translateX(0%);
 }
-#r-2:checked ~ .img-content .img {
-    transform: translateX(-590px);
-    animation: appear-2 .5s;
+#r-2:checked ~ .container .slides .slide {
+    transform: translateX(-100%);
 }
-#r-3:checked ~ .img-content .img {
-    transform: translateX(-1180px);
-    animation: appear-3 .5s;
+#r-3:checked ~ .container .slides .slide {
+    transform: translateX(-200%);
 }
-#r-4:checked ~ .img-content .img {
-    transform: translateX(-1770px);
-    animation: appear-4 .5s;
+#r-4:checked ~ .container .slides .slide {
+    transform: translateX(-300%);
 }
-#r-5:checked ~ .img-content .img {
-    transform: translateX(-2360px);
-    animation: appear-5 .5s;
-}
-#r-6:checked ~ .img-content .img {
-    transform: translateX(-2950px);
-    animation: appear-6 .5s;
+#r-5:checked ~ .container .slides .slide {
+    transform: translateX(-400%);
 }
 
 .radio {
@@ -198,10 +170,26 @@ label:hover {
 }
 
 label {
-    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
 }
 
-label:hover {
-    cursor: pointer;
-    color: #c7c4ae;
+span {
+    width: 1.2em;
+    height: 1.2em;
+    background-color: rgb(255, 229, 164);
+    border-radius: 50%;
+    transition: .2s;
+    /* border: 1px solid rgb(250, 213, 120); */
 }
+
+span:hover {
+    cursor: pointer;
+    background-color: #85805d;
+}
+
+/* mobile version */
