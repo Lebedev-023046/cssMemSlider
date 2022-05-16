@@ -79,14 +79,12 @@
 .slide {
     width: 20%;
     transition: all .2s ease;
-    border-radius: 2%;
 }
 
 .slide img {
     object-fit: contain;
     width: 100%;
     height: 100%;
-    border-radius: 2%;
     margin-top: 3%;
 }
 
@@ -199,6 +197,21 @@ span:hover {
 
 /* mobile version */
 
-@media screen (max-width: 768px) {
-    
+@media screen and (max-width: 768px) {
+    .container {
+        width: 80%;
+    }
+    .content {
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .mem-text {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        width: 100%;
+    }
 }
