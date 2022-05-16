@@ -194,6 +194,9 @@ span:hover {
     background-color: rgb(253, 212, 107);
 }
 
+label:active span {
+    background-color: rgb(176, 141, 52);
+}
 
 /* mobile version */
 
